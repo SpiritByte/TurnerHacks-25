@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Webpage{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-gray-800 p-4 fixed w-full top-0 transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out z-20">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-lg font-semibold">My Website</a>
+            <div>
+                <a href="#" class="text-gray-300 hover:text-white mx-2">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white mx-2">About Us</a>
+                <a href="#features" class="text-gray-300 hover:text-white mx-2">Features</a>
+                <a href="#contact" class="text-gray-300 hover:text-white mx-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-4">Feel free to reach out through any of the platforms below.</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

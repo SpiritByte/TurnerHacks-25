@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Personal Webpage{% endblock %}
+
+{% block content %}
+    <!-- Home Area with Looped Video -->
+    <div class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video class="absolute min-w-full min-h-full w-screen max-w-none opacity-50 z-0" autoplay loop muted>
+            <source src="{{ url_for('static', filename='video/dragonflai.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="relative z-10 text-white text-center">
+            <h1 class="text-5xl font-bold">Welcome to My Test Website</h1>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">About Us</h2>
+            <p class="text-gray-700 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <h3 class="text-2xl font-semibold mb-2">Feature One</h3>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="https://picsum.photos/300/200?random=1" alt="Random Image" class="rounded-lg">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <h3 class="text-2xl font-semibold mb-2">Feature Two</h3>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="https://picsum.photos/300/200?random=2" alt="Random Image" class="rounded-lg">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <h3 class="text-2xl font-semibold mb-2">Feature Three</h3>
+                    <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="https://picsum.photos/300/200?random=3" alt="Random Image" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
